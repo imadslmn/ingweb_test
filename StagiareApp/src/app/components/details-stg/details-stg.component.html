@@ -1,0 +1,9 @@
+<h2>Detalis de stagiare</h2>
+<div>
+  <form (ngSubmit)="updateStg()">
+    <label>Nom: <input [(ngModel)]="stg.nom" name="nom"></label>
+    <label>Prenom: <input [(ngModel)]="stg.prenom" name="prenom"></label>
+    <label>Email: <input [(ngModel)]="stg.adressMail" name="adressmail"></label>
+    <button type="submit">Modifier</button>
+  </form>
+</div>

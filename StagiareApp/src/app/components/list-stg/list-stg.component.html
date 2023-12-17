@@ -1,0 +1,28 @@
+<h1>la list-stg</h1>
+<div *ngIf="StgList.length>0;else listVide">
+<table class="table">
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Nom</th>
+    <th>Prenom</th>
+    <th>Email</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let stgr of StgList;">
+    <td>{{stgr.id}}</td>
+    <td>{{stgr.nom}}</td>
+    <td>{{stgr.prenom}}</td>
+    <td>{{stgr.adressMail}}</td>
+    <td><button (click)="modifierStg(stgr.id)">Modifier</button><button (click)="supprimerStg(stgr.id)">Supprimer</button></td>
+
+  </tr>
+  </tbody>
+</table>
+  <button routerLink="/add">Ajouter Stagiare</button>
+</div>
+<button (click)="deleteAll()">Supprimer tout</button>
+<ng-template #listVide>
+  <p>La list des emplyes est vide </p>
+</ng-template>
